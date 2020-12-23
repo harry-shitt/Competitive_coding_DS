@@ -19,16 +19,16 @@ int timer=0;
 
 void articulation(int node ,int p){
 	visited[node]=1;
-	
+
 	in[node]=low[node]=timer++;
 	int children=0;
-	for(int i=0;i<adj[node].size();i++)	
+	for(int i=0;i<adj[node].size();i++)
 	{
 		int child = adj[node][i];
 		if(child == p) continue;
-		
+
 		if(visited[child]){
-			low[node]=min(low[node],in[child]);	
+			low[node]=min(low[node],in[child]);
 		}
 		else
 		{
@@ -40,14 +40,14 @@ void articulation(int node ,int p){
 				cout<<node<<endl;
 			}
 		}
-		
-		if(p==-1 && children>1)		
+
+		if(p==-1 && children>1)
 		{
 			cout<<node<<endl;
 		}
 	}
-	
-	
+
+
 }
 
 void solve()
@@ -61,14 +61,14 @@ void solve()
 	}
 	articulation(1,-1);
 }
- 
- 
- 
- 
- 
- 
- 
- 
+
+
+
+
+
+
+
+
 int main(void)
 {
 	ios_base::sync_with_stdio(false);
@@ -76,8 +76,8 @@ int main(void)
     int t;
     cin>>t;
     while(t--)
-    {    	
+    {
 		solve();
 	}
-	return 0;	
-}  
+	return 0;
+}
