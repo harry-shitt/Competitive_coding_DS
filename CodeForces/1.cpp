@@ -79,7 +79,7 @@ void solve()
   {
     ans = (abs(a - b)*w);
   }
-  cout<<(int)ans<<endl;
+  cout<<ans<<endl;
 }
 
 
